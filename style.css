@@ -1,0 +1,455 @@
+/*
+Theme Name: GR333 WP Theme
+Theme URI: https://yoursite.com
+Author: Your Name
+Author URI: https://yoursite.com
+Description: A clean, modern WordPress starter theme
+Version: 1.0.0
+Requires at least: 5.0
+Tested up to: 6.4
+Requires PHP: 7.4
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: gr333-wp-theme
+Tags: blog, custom-menu, featured-images, threaded-comments, translation-ready
+*/
+
+/* ==========================================================================
+   Reset & Base Styles
+   ========================================================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+a {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ==========================================================================
+   Layout
+   ========================================================================== */
+
+.site-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ==========================================================================
+   Header
+   ========================================================================== */
+
+.site-header {
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+    padding: 20px 0;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.site-branding {
+    flex: 0 0 auto;
+}
+
+.site-title {
+    font-size: 28px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.site-title a {
+    color: #333;
+    text-decoration: none;
+}
+
+.site-description {
+    font-size: 14px;
+    color: #666;
+    margin: 5px 0 0;
+}
+
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
+
+.main-navigation {
+    flex: 1 1 auto;
+    text-align: right;
+}
+
+.main-navigation ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+.main-navigation li {
+    position: relative;
+}
+
+.main-navigation a {
+    color: #333;
+    font-weight: 500;
+    padding: 10px 0;
+    display: block;
+}
+
+.main-navigation a:hover {
+    color: #0073aa;
+    text-decoration: none;
+}
+
+/* Submenu styles */
+.main-navigation ul ul {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 200px;
+    display: none;
+    flex-direction: column;
+    gap: 0;
+}
+
+.main-navigation ul li:hover > ul {
+    display: flex;
+}
+
+.main-navigation ul ul a {
+    padding: 12px 20px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* ==========================================================================
+   Content
+   ========================================================================== */
+
+.site-content {
+    padding: 40px 0;
+    min-height: 60vh;
+}
+
+.content-area {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+}
+
+.content-area.has-sidebar {
+    grid-template-columns: 2fr 1fr;
+}
+
+/* Posts */
+.post,
+.page {
+    margin-bottom: 40px;
+}
+
+.entry-header {
+    margin-bottom: 20px;
+}
+
+.entry-title {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.entry-meta {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.entry-content {
+    line-height: 1.8;
+}
+
+.entry-content h1,
+.entry-content h2,
+.entry-content h3,
+.entry-content h4,
+.entry-content h5,
+.entry-content h6 {
+    margin: 30px 0 15px;
+}
+
+.entry-content p {
+    margin-bottom: 20px;
+}
+
+.entry-content ul,
+.entry-content ol {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.entry-footer {
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e0e0e0;
+    font-size: 14px;
+    color: #666;
+}
+
+/* Featured Image */
+.post-thumbnail {
+    margin-bottom: 30px;
+}
+
+.post-thumbnail img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+/* Pagination */
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 40px 0;
+}
+
+.pagination a,
+.pagination span {
+    padding: 8px 16px;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+}
+
+.pagination .current {
+    background-color: #0073aa;
+    color: #fff;
+    border-color: #0073aa;
+}
+
+/* ==========================================================================
+   Sidebar
+   ========================================================================== */
+
+.sidebar {
+    font-size: 15px;
+}
+
+.widget {
+    margin-bottom: 40px;
+    padding: 25px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.widget-title {
+    font-size: 18px;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #0073aa;
+}
+
+.widget ul {
+    list-style: none;
+}
+
+.widget ul li {
+    padding: 8px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.widget ul li:last-child {
+    border-bottom: none;
+}
+
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+
+.site-footer {
+    background-color: #333;
+    color: #fff;
+    padding: 40px 0 20px;
+    margin-top: 60px;
+}
+
+.footer-content {
+    text-align: center;
+}
+
+.site-info {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.site-info a {
+    color: #fff;
+}
+
+/* ==========================================================================
+   Comments
+   ========================================================================== */
+
+.comments-area {
+    margin-top: 60px;
+}
+
+.comments-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+}
+
+.comment-list {
+    list-style: none;
+}
+
+.comment {
+    margin-bottom: 30px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 4px;
+}
+
+.comment-author {
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.comment-meta {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 15px;
+}
+
+/* Comment Form */
+.comment-form {
+    margin-top: 40px;
+}
+
+.comment-form input[type="text"],
+.comment-form input[type="email"],
+.comment-form input[type="url"],
+.comment-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    font-family: inherit;
+}
+
+.comment-form textarea {
+    min-height: 150px;
+    resize: vertical;
+}
+
+.comment-form input[type="submit"] {
+    background-color: #0073aa;
+    color: #fff;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.comment-form input[type="submit"]:hover {
+    background-color: #005a87;
+}
+
+/* ==========================================================================
+   Responsive
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .main-navigation {
+        text-align: center;
+        width: 100%;
+    }
+    
+    .main-navigation ul {
+        flex-direction: column;
+        gap: 0;
+    }
+    
+    .main-navigation a {
+        padding: 10px;
+    }
+    
+    .content-area.has-sidebar {
+        grid-template-columns: 1fr;
+    }
+    
+    .entry-title {
+        font-size: 24px;
+    }
+}
+
+/* ==========================================================================
+   Utility Classes
+   ========================================================================== */
+
+.screen-reader-text {
+    clip: rect(1px, 1px, 1px, 1px);
+    position: absolute !important;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+}
+
+.alignleft {
+    float: left;
+    margin: 0 20px 20px 0;
+}
+
+.alignright {
+    float: right;
+    margin: 0 0 20px 20px;
+}
+
+.aligncenter {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.wp-caption {
+    max-width: 100%;
+}
+
+.wp-caption-text {
+    font-size: 14px;
+    text-align: center;
+    padding: 10px 0;
+    color: #666;
+}
