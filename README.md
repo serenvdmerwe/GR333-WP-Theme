@@ -105,6 +105,20 @@ Example support statement:
 
 ---
 
+## For Buyers
+
+- **What you get:** a lightweight, developer-friendly starter theme with production-ready templates, editor styles, accessible markup, and an optional automation workflow that generates a `CHANGELOG.md` from commits.
+- **Automation note:** This repository includes a GitHub Actions workflow that can automatically prepend dated changelog entries to `CHANGELOG.md` on pushes and pull requests. The automation is repo-side (in `.github/workflows/`) and will run on GitHub; some deployment tools strip dotfiles—if you do not see the `.github` folder on a deployed site, the automation remains active in the repo but will not run from the installed theme files.
+- **Admin UX:** When the workflow file is present in the theme directory during development, the theme shows a small admin notice linking to the local `CHANGELOG.md` in the theme editor and (when available) a direct "View on GitHub" link to the repo changelog.
+- **How to disable automation:** Remove or rename the workflow file in `.github/workflows/` or disable Actions for the repository in the GitHub settings.
+
+## Roadmap (3 phases)
+
+- **Phase 1 — Productize (0–4 weeks):** finalize `CHANGELOG.md`, `README.md`, `LICENSE`, add `screenshot.png`, package the zip, and run accessibility & performance checks.
+- **Phase 2 — Market Entry (1–2 months):** publish a free variant to WordPress.org, create a demo site and documentation, and prepare a paid/pro distribution channel (store or marketplace) if desired.
+- **Phase 3 — Growth & Support (2–6 months):** add premium templates/patterns, set up an updates/subscription workflow for pro customers, gather feedback, and iterate with regular releases.
+
+
 ## Next steps I can take for you
 
 - Create a production-ready `screenshot.png` (mockup)
