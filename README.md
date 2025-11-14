@@ -1,70 +1,42 @@
-***GR333 WP Theme — Starter Theme***
+***GR333 WP Theme — Premium WordPress Theme***
 
-A clean, modern WordPress starter theme focused on clarity, extensibility and best practices.
+GR333 is a polished, developer-friendly WordPress theme built for agencies, freelancers and product makers who want a modern, extensible foundation that ships fast.
 
----
-
-**Quick Links**
-
-- Repository: `GR333-WP-Theme` (workspace root)
-- Core files: `style.css`, `functions.php`, `index.php`, `header.php`, `footer.php`
+This README is written as the product landing and reference for buyers and integrators. Replace the placeholder links and pricing below with your actual store/demo URLs before publishing.
 
 ---
 
-## File Structure
+## Product Overview
 
-Top-level structure (files and folders included in this package):
+- Clean, responsive design with accessible markup and Gutenberg-ready styles.
+- Modular architecture: templates are split into `template-parts/` for easy customization.
+- Lightweight: built with performance and compatibility in mind.
 
-```
-GR333-WP-Theme/
-├─ style.css
-├─ functions.php
-├─ index.php
-├─ header.php
-├─ footer.php
-├─ sidebar.php
-├─ single.php
-├─ page.php
-├─ archive.php
-├─ search.php
-├─ 404.php
-├─ comments.php
-├─ searchform.php
-├─ screenshot.png
-├─ template-parts/
-│  ├─ content.php
-│  ├─ content-single.php
-│  ├─ content-page.php
-│  ├─ content-none.php
-│  └─ content-search.php
-├─ assets/
-│  ├─ css/
-│  │  ├─ custom.css
-│  │  └─ editor-style.css
-│  ├─ js/
-│  │  └─ main.js
-│  └─ images/
-└─ inc/
-   ├─ custom-functions.php
-   ├─ template-functions.php
-   └─ customizer.php
-```
+Who it’s for: designers, agencies, bloggers and small businesses who need a theme they can customize or ship as a client deliverable.
 
 ---
 
-## Features
+## What’s Included
 
-This starter includes a compact, production-friendly baseline:
+- Fully working WordPress theme: `style.css`, `functions.php`, `index.php`, `header.php`, `footer.php` and recommended templates.
+- Template partials in `template-parts/` for content reuse.
+- Basic editor styles in `assets/css/editor-style.css` to match backend and front-end visuals.
+- Starter JS in `assets/js/main.js` (mobile menu / small utilities).
 
-- Theme support: custom logo, featured images, custom menus, HTML5 markup
-- Widget areas: sidebar + footer
-- Block-editor (Gutenberg) friendly styles
-- Translation-ready and accessible markup patterns
-- Template partials under `template-parts/` for easy overrides
+---
 
-## Visual: language & coverage snapshot
+## Feature Highlights
 
-This small chart shows the primary languages and approximate code coverage in the theme. It is intended as a quick visual for maintainers.
+- Responsive layout and mobile-first CSS
+- Gutenberg block compatibility and editor styles
+- Custom logo and menu support
+- Widget-ready sidebar and footer areas
+- Template partials for fast customization
+- Translation-ready strings and accessible markup patterns
+
+---
+
+## Technical Snapshot
 
 ```
 Language    Coverage
@@ -75,37 +47,72 @@ JS    : ███████░░░  70%
 Docs  : ██████░░░░  60%
 ```
 
----
-
-## Installation (quick)
-
-1. Verify `style.css` contains a valid theme header (must include `Theme Name:`).
-2. Create a zip of the `GR333-WP-Theme` folder (ensure files are at the root of the zip).
-3. In WordPress Admin: Appearance → Themes → Add New → Upload Theme → choose the zip → Install & Activate.
-
-Notes:
-- If WordPress reports a missing stylesheet, re-check `style.css` header or re-zip ensuring files are top-level inside the archive.
+Notes: coverage percentages are illustrative — update after development to reflect real metrics.
 
 ---
 
-## Development tips
+## Install & Setup (for buyers)
 
-- Use `template-parts/` for content blocks to keep templates small and composable.
-- Register menus and widget areas in `functions.php` so users can configure them from the Customizer.
-- Keep editor styles in `assets/css/editor-style.css` so block styles are consistent between editor and frontend.
+1. Ensure `style.css` includes your theme header (Theme Name, Author, Version).
+2. Zip the `GR333-WP-Theme` folder so theme files are at the archive root.
+3. In WP Admin -> Appearance -> Themes -> Add New -> Upload Theme -> Install & Activate.
 
-## Quick checklist
-
-- [x] Core templates: `style.css`, `functions.php`, `index.php`, `header.php`, `footer.php`
-- [x] Recommended templates: `sidebar.php`, `single.php`, `page.php`, `archive.php`, `search.php`, `404.php`, `comments.php`
-- [ ] Optional: `screenshot.png`, `assets/js/main.js`, `assets/css/custom.css`, `template-parts/content-search.php`
+Post-install: visit Appearance -> Customize to set logo, menus, widget areas and homepage settings.
 
 ---
 
-## Resources
+## Pricing & Licensing (example packages)
 
-- WordPress Theme Developer Handbook: https://developer.wordpress.org/themes/
-- Theme Review Guidelines: https://make.wordpress.org/themes/handbook/review/
+Use these as a starting point — replace with your store details and exact legal terms.
+
+```
+Edition     Price   Updates     Support
+Free        $0      Community   Community
+Pro         $49     12 months   Email
+Developer   $99     12 months   Priority
+```
+
+- License: theme code is distributed under GPLv2 or later (WordPress requirement). You may offer paid support, upgrades, and a commercial license for bundled assets; consult a lawyer for dual-licensing specifics.
+
+---
+
+## Demo & Marketing Assets
+
+- Add a high-resolution `screenshot.png` (1200×900) showing the theme on a sample homepage.
+- Create a live demo URL and include it in this README and your product listing.
+- Provide a short demo content export (WXR) for buyers to import sample content easily.
+
+---
+
+## Support & Updates
+
+- Provide a clear support channel (email, helpdesk, or marketplace support).
+- Keep a changelog: add a `CHANGELOG.md` to track releases and fixes.
+
+Example support statement:
+
+"We provide 12 months of free updates and email support for Pro and Developer license holders. Bug fixes are delivered to all users." — edit to your policy.
+
+---
+
+## Quick Checklist Before Listing
+
+- [ ] Replace placeholder demo and purchase URLs with actual links
+- [ ] Add `screenshot.png` (1200×900) to repository root
+- [ ] Include `LICENSE` or `LICENSE.txt` clarifying license terms
+- [ ] Add `CHANGELOG.md` and `README-SUPPORT.md` (support/FAQ)
+- [ ] Run accessibility and performance checks (Lighthouse)
+
+---
+
+## Next steps I can take for you
+
+- Create a production-ready `screenshot.png` (mockup)
+- Build a `GR333-WP-Theme.zip` package for upload
+- Add a `CHANGELOG.md` and `LICENSE` file template
+- Prepare a demo WXR export and a one-click demo installer script
+
+Tell me which of the above you'd like me to do next and I’ll proceed.
 
 ---
 
