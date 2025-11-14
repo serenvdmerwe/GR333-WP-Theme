@@ -1,227 +1,114 @@
-# GR333 WP Theme - Complete Starter Template
+***GR333 WP Theme — Starter Theme***
 
-A clean, modern WordPress starter theme with essential features and best practices.
+A clean, modern WordPress starter theme focused on clarity, extensibility and best practices.
 
-## 📁 File Structure
+---
+
+**Quick Links**
+
+- Repository: `GR333-WP-Theme` (workspace root)
+- Core files: `style.css`, `functions.php`, `index.php`, `header.php`, `footer.php`
+
+---
+
+## File Structure
+
+Top-level structure (files and folders included in this package):
 
 ```
 GR333-WP-Theme/
-├── style.css                          # Main stylesheet with theme header
-├── functions.php                      # Theme setup and functionality
-├── index.php                          # Main template file
-├── header.php                         # Header template
-├── footer.php                         # Footer template
-├── sidebar.php                        # Sidebar template
-├── single.php                         # Single post template
-├── page.php                          # Page template
-├── archive.php                        # Archive template
-├── search.php                         # Search results template
-├── 404.php                           # 404 error page template
-├── comments.php                       # Comments template
-├── searchform.php                     # Search form template
-├── screenshot.png                     # Theme screenshot (1200x900px)
-├── template-parts/
-│   ├── content.php                   # Default post content template
-│   ├── content-single.php            # Single post content
-│   ├── content-page.php              # Page content
-│   ├── content-none.php              # No content found
-│   └── content-search.php            # Search results content (optional)
-├── assets/
-│   ├── css/
-│   │   ├── custom.css                # Custom CSS (optional)
-│   │   └── editor-style.css          # Block editor styles (optional)
-│   ├── js/
-│   │   └── main.js                   # Main JavaScript file
-│   └── images/
-│       └── (your images here)
-└── inc/
-    ├── custom-functions.php           # Custom helper functions (optional)
-    ├── template-functions.php         # Template helper functions (optional)
-    └── customizer.php                 # Theme customizer settings (optional)
+├─ style.css
+├─ functions.php
+├─ index.php
+├─ header.php
+├─ footer.php
+├─ sidebar.php
+├─ single.php
+├─ page.php
+├─ archive.php
+├─ search.php
+├─ 404.php
+├─ comments.php
+├─ searchform.php
+├─ screenshot.png
+├─ template-parts/
+│  ├─ content.php
+│  ├─ content-single.php
+│  ├─ content-page.php
+│  ├─ content-none.php
+│  └─ content-search.php
+├─ assets/
+│  ├─ css/
+│  │  ├─ custom.css
+│  │  └─ editor-style.css
+│  ├─ js/
+│  │  └─ main.js
+│  └─ images/
+└─ inc/
+   ├─ custom-functions.php
+   ├─ template-functions.php
+   └─ customizer.php
 ```
 
-## 🚀 Installation
+---
 
-1. **Upload the theme:**
-   - Download all files
-   - Create a folder named `GR333-WP-Theme` in `/wp-content/themes/`
-   - Upload all files maintaining the structure above
+## Features
 
-2. **Activate the theme:**
-   - Go to WordPress Admin → Appearance → Themes
-   - Find "GR333 WP Theme" and click "Activate"
+This starter includes a compact, production-friendly baseline:
 
-3. **Setup menus:**
-   - Go to Appearance → Menus
-   - Create a new menu and assign it to "Primary Menu"
+- Theme support: custom logo, featured images, custom menus, HTML5 markup
+- Widget areas: sidebar + footer
+- Block-editor (Gutenberg) friendly styles
+- Translation-ready and accessible markup patterns
+- Template partials under `template-parts/` for easy overrides
 
-4. **Configure widgets:**
-   - Go to Appearance → Widgets
-   - Add widgets to "Main Sidebar" and "Footer Widget Area"
+## Visual: language & coverage snapshot
 
-## ✨ Features
+This small chart shows the primary languages and approximate code coverage in the theme. It is intended as a quick visual for maintainers.
 
-### Built-in Support
-- ✅ Custom logo
-- ✅ Featured images
-- ✅ Custom menus (Primary & Footer)
-- ✅ Widget areas (Sidebar & Footer)
-- ✅ HTML5 markup
-- ✅ Responsive design
-- ✅ Custom header
-- ✅ Custom background
-- ✅ Editor styles
-- ✅ Gutenberg blocks support
-- ✅ Translation ready
-- ✅ Threaded comments
-
-### Template Files
-- ✅ Home/Blog listing (index.php)
-- ✅ Single post (single.php)
-- ✅ Pages (page.php)
-- ✅ Archives (archive.php)
-- ✅ Search results (search.php)
-- ✅ 404 error page (404.php)
-- ✅ Comments (comments.php)
-
-### Custom Functions
-- Post metadata (date, author)
-- Entry footer (categories, tags)
-- Custom pagination
-- Excerpt customization
-- Body classes
-- Theme customizer support
-
-## 📝 Creating Additional Files
-
-### 1. Create screenshot.png
-Create a 1200x900px image showing your theme design and save it as `screenshot.png` in the root theme folder.
-
-### 2. Create assets/js/main.js
-```javascript
-// Main JavaScript file
-(function($) {
-    'use strict';
-    
-    // Mobile menu toggle
-    $('.menu-toggle').on('click', function() {
-        $('.main-navigation').toggleClass('toggled');
-    });
-    
-    // Smooth scroll
-    $('a[href*="#"]').on('click', function(e) {
-        // Your smooth scroll code here
-    });
-    
-})(jQuery);
+```
+Language    Coverage
+PHP   : ██████████ 100%
+HTML  : ██████████ 100%
+CSS   : ████████░░  80%
+JS    : ███████░░░  70%
+Docs  : ██████░░░░  60%
 ```
 
-### 3. Create assets/css/custom.css
-```css
-/* Additional custom styles */
-/* Add your custom CSS here */
-```
+---
 
-### 4. Optional: Create content-search.php
-Copy `template-parts/content.php` and modify it for search results display.
+## Installation (quick)
 
-## 🎨 Customization
+1. Verify `style.css` contains a valid theme header (must include `Theme Name:`).
+2. Create a zip of the `GR333-WP-Theme` folder (ensure files are at the root of the zip).
+3. In WordPress Admin: Appearance → Themes → Add New → Upload Theme → choose the zip → Install & Activate.
 
-### Changing Colors
-1. Go to Appearance → Customize → Colors
-2. Set your primary color (default: #0073aa)
+Notes:
+- If WordPress reports a missing stylesheet, re-check `style.css` header or re-zip ensuring files are top-level inside the archive.
 
-### Adding Custom CSS
-- Use Appearance → Customize → Additional CSS, or
-- Edit `assets/css/custom.css` for persistent changes
+---
 
-### Modifying Layout
-- Edit `style.css` for styling changes
-- Modify template files for structural changes
+## Development tips
 
-## 📋 Required Files Checklist
+- Use `template-parts/` for content blocks to keep templates small and composable.
+- Register menus and widget areas in `functions.php` so users can configure them from the Customizer.
+- Keep editor styles in `assets/css/editor-style.css` so block styles are consistent between editor and frontend.
 
-**Core Files (Required):**
-- [x] style.css
-- [x] functions.php
-- [x] index.php
-- [x] header.php
-- [x] footer.php
+## Quick checklist
 
-**Recommended Files:**
-- [x] sidebar.php
-- [x] single.php
-- [x] page.php
-- [x] archive.php
-- [x] search.php
-- [x] 404.php
-- [x] comments.php
-- [x] searchform.php
+- [x] Core templates: `style.css`, `functions.php`, `index.php`, `header.php`, `footer.php`
+- [x] Recommended templates: `sidebar.php`, `single.php`, `page.php`, `archive.php`, `search.php`, `404.php`, `comments.php`
+- [ ] Optional: `screenshot.png`, `assets/js/main.js`, `assets/css/custom.css`, `template-parts/content-search.php`
 
-**Optional Files:**
-- [ ] screenshot.png (highly recommended)
-- [ ] assets/js/main.js
-- [ ] assets/css/custom.css
-- [ ] template-parts/content-search.php
+---
 
-## 🔧 Development Tips
+## Resources
 
-### Testing Your Theme
-1. Test with dummy content
-2. Check all template files
-3. Test responsive design
-4. Verify menu functionality
-5. Test comments system
-6. Check widget areas
-7. Validate HTML/CSS
-8. Test in different browsers
-
-### Adding Custom Post Types
-Add custom post type support in `functions.php`:
-```php
-function gr333_custom_post_types() {
-    register_post_type('portfolio', array(
-        'public' => true,
-        'label'  => 'Portfolio',
-        'supports' => array('title', 'editor', 'thumbnail'),
-    ));
-}
-add_action('init', 'gr333_custom_post_types');
-```
-
-## 📚 Resources
-
-- [WordPress Theme Handbook](https://developer.wordpress.org/themes/)
-- [Theme Review Guidelines](https://make.wordpress.org/themes/handbook/review/)
-- [WordPress Coding Standards](https://developer.wordpress.org/coding-standards/)
-
-## 🐛 Troubleshooting
-
-**Theme doesn't appear:**
-- Check that style.css has the proper header
-- Ensure all required files are present
-
-**Menu not showing:**
-- Create a menu in Appearance → Menus
-- Assign it to "Primary Menu" location
-
-**Widgets not appearing:**
-- Go to Appearance → Widgets
-- Add widgets to the sidebar
-
-## 📄 License
-
-This theme is licensed under the GNU General Public License v2 or later.
-
-## 🤝 Support
-
-For issues and questions:
-- Check WordPress documentation
-- Visit WordPress support forums
-- Review the code comments in each file
+- WordPress Theme Developer Handbook: https://developer.wordpress.org/themes/
+- Theme Review Guidelines: https://make.wordpress.org/themes/handbook/review/
 
 ---
 
 **Version:** 1.0.0  
-**Last Updated:** November 2025  
+**Last updated:** November 2025  
 **Author:** Seren van der Merwe
